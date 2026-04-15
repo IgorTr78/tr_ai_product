@@ -1,0 +1,13 @@
+{
+  "name": "igor-treyner-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Static portfolio site for Railway deployment",
+  "scripts": {
+    "start": "serve -s . -l tcp://0.0.0.0:${PORT:-3000}",
+    "dev": "serve -s . -l 3000"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}
