@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=GY9t0W0PmdsMvEzAWqU-1yvEaLy-fVrozKWsqPluUe4ZRVLJt11rwRO7dSrBcxDJyFp-iJcsh5nelEoWZXsRvlUawDYt812-uJmyoUzBNTcTE0BpQubsL5M925IBR__lo_AdJOfld5vhhkaMZVpY8gyTHZivbKsZud3B_TLF2u1mdBTET9BkcGr56CLAHbv6tTshKQiN2DKxEpU9Q6vR2qOYhH3abGKXJpRNrxnZBVKtf_wJhrl-SchoCdnDpmZnX-YQKEn9-ZJl-krHDufjqw" charset="UTF-8"></script><style>
+<style>
 :root {
   --bg: #0a0d16;
   --bg2: #101524;
@@ -276,6 +276,18 @@ nav{
   padding:clamp(48px,7vh,100px) 0;
   display:flex;flex-direction:column;
   align-items:flex-start;
+}
+
+.hero-intro{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-bottom:18px;
+}
+.hero-kicker{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
 }
 
 .hero-role-line{
@@ -682,13 +694,13 @@ nav{
 /* FEATURED CASES */
 .project-feature {
   display:grid;
-  grid-template-columns: 1.08fr 0.92fr;
-  gap: 28px;
+  grid-template-columns: minmax(0,0.94fr) minmax(420px,0.86fr);
+  gap: 22px;
   background: linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.03));
   border:1px solid rgba(255,255,255,0.08);
   border-radius: 26px;
-  padding: 26px;
-  margin-bottom: 28px;
+  padding: 22px;
+  margin-bottom: 24px;
   box-shadow: 0 24px 72px rgba(0,0,0,.32), 0 14px 30px rgba(91,92,240,.10);
   overflow:hidden;
 }
@@ -697,7 +709,9 @@ nav{
   position:relative;
   border-radius: 18px;
   overflow:hidden;
-  min-height: 380px;
+  min-height: 300px;
+  max-width: 860px;
+  margin-inline:auto;
   background: radial-gradient(circle at 20% 20%, rgba(91,92,240,.24), transparent 35%), #090d17;
   border:1px solid rgba(255,255,255,.06);
 }
@@ -715,11 +729,11 @@ nav{
   font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);
 }
 .feature-label::before{content:'';width:18px;height:1px;background:var(--accent);opacity:.7}
-.feature-title{font-family:'DM Serif Display',serif;font-size:clamp(30px,4vw,44px);line-height:1.02;margin-bottom:10px}
-.feature-sub{font-size:18px;color:#c8d0ea;margin-bottom:16px}
-.feature-desc{font-size:15px;line-height:1.8;color:var(--text2);margin-bottom:18px;max-width:560px}
-.feature-list{list-style:none;display:grid;gap:10px;margin:0 0 22px;padding:0}
-.feature-list li{display:flex;gap:10px;color:#d7def5;font-size:14px;line-height:1.6}
+.feature-title{font-family:'DM Serif Display',serif;font-size:clamp(28px,3.2vw,40px);line-height:1.02;margin-bottom:10px}
+.feature-sub{font-size:17px;color:#c8d0ea;margin-bottom:14px}
+.feature-desc{font-size:14px;line-height:1.7;color:var(--text2);margin-bottom:16px;max-width:520px}
+.feature-list{list-style:none;display:grid;gap:8px;margin:0 0 18px;padding:0}
+.feature-list li{display:flex;gap:10px;color:#d7def5;font-size:13px;line-height:1.55}
 .feature-list li::before{content:'✦';color:var(--accent);opacity:.9;flex-shrink:0}
 .feature-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
 .project-card.has-image{padding:0;overflow:hidden}
@@ -736,10 +750,10 @@ nav{
 .qr-close{appearance:none;border:none;background:rgba(255,255,255,.06);color:#fff;width:36px;height:36px;border-radius:10px;font-size:18px;cursor:pointer}
 @media(max-width:980px){
   .project-feature{grid-template-columns:1fr;gap:22px;padding:20px}
-  .feature-media{min-height:320px}
+  .feature-media{min-height:280px}
 }
 @media(max-width:640px){
-  .feature-media{min-height:260px}
+  .feature-media{min-height:220px}
   .feature-title{font-size:32px}
   .feature-sub{font-size:16px}
   .feature-actions{flex-direction:column;align-items:stretch}
@@ -913,7 +927,11 @@ body{background:#0a0d16;}
   <div class="hero-inner">
     <!-- LEFT -->
     <div class="hero-left">
-      <div class="hero-role-line">AI Product Manager</div>
+      <div class="hero-intro">
+<div class="hero-kicker">
+          <div class="hero-role-line">AI Product Manager</div>
+        </div>
+      </div>
 
       <h1 class="hero-name">
         Игорь <span class="hero-name-accent">Трейнер</span>
@@ -1182,8 +1200,7 @@ body{background:#0a0d16;}
         <li>Привычки и ежедневные метрики в одном экране</li>
       </ul>
       <div class="feature-actions">
-        <button class="btn-primary" type="button" onclick="openQrModal()">Скачать приложение →</button>
-        <a href="#" class="btn-outline" onclick="openQrModal(); return false;">Открыть QR</a>
+        <button class="btn-primary" type="button" onclick="openQrModal()">Скачать приложение / QR →</button>
       </div>
     </div>
   </article>
